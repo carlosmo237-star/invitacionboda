@@ -1,0 +1,104 @@
+/* --- style.css --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;
+    font-family: 'Montserrat', sans-serif; background-color: #000; 
+    color: #e0e0e0; /* GRIS CLARO para el texto base */
+}
+
+/* FONDO DESENFOCADO */
+body::before {
+    content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('foto_boda_1.jpg'); background-size: cover; background-position: center;
+    filter: blur(25px) brightness(0.4); z-index: -2;
+}
+
+/* FOTO NÍTIDA AL CENTRO */
+body::after {
+    content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('foto_boda_1.jpg'); background-size: contain; background-position: center;
+    background-repeat: no-repeat; z-index: -1;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.65); padding: 45px 35px; width: 90%; max-width: 450px;
+    text-align: center; border: 3px solid #000000; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+/* Títulos en Blanco Puro para máximo impacto */
+h1 { 
+    font-family: 'Playfair Display', serif; font-size: 3rem; color: #ffffff; 
+    text-shadow: 2px 2px 12px rgba(0,0,0,1); margin: 0; 
+}
+
+.subtitle { 
+    font-family: 'Cinzel', serif; letter-spacing: 5px; font-size: 0.9rem; 
+    color: #cccccc; /* Gris platino */
+    text-transform: uppercase; display: block; margin-bottom: 25px; 
+}
+
+/* Contador en Blanco y Plata */
+.countdown-container { 
+    display: flex; justify-content: space-around; margin: 25px 0; padding: 15px; 
+    border: 2px solid #888888; background: rgba(0,0,0,0.7); 
+}
+
+.countdown-item span { 
+    font-family: 'Cinzel', serif; font-size: 1.8rem; color: #ffffff; 
+    display: block; text-shadow: 1px 1px 5px #000;
+}
+
+.countdown-item p { 
+    font-size: 0.7rem; color: #bbbbbb; text-transform: uppercase; margin: 0; font-weight: 700;
+}
+
+.texto-bienvenida { 
+    font-weight: 700; color: #d1d1d1; margin-bottom: 30px; 
+    text-shadow: 1px 1px 5px #000; font-size: 1.1rem;
+}
+
+/* Ubicaciones más visibles */
+.locations-section { 
+    margin: 30px 0; border: 2px solid #000; padding: 20px; background: rgba(0,0,0,0.5); 
+}
+
+.location-title { 
+    font-size: 0.8rem; letter-spacing: 3px; color: #aaaaaa; 
+    margin-bottom: 12px; font-weight: 700; 
+}
+
+.btn-location { 
+    display: block; color: #e0e0e0; text-decoration: none; padding: 12px; 
+    border: 1px solid #666666; margin: 10px 0; font-weight: 700; 
+    font-size: 0.9rem; transition: 0.3s; 
+}
+
+.btn-location:hover { 
+    background: rgba(255,255,255,0.1); color: #ffffff; border-color: #ffffff;
+}
+
+.secondary-photo { 
+    width: 100%; max-width: 240px; border: 4px solid #000; 
+    margin: 25px 0; box-shadow: 0 10px 30px #000; 
+}
+
+/* Botón de Confirmación con contraste */
+.btn-confirm { 
+    background: #ffffff; color: #000000; font-weight: 700; border: 2px solid #000; 
+    padding: 20px; cursor: pointer; width: 100%; text-transform: uppercase; 
+    transition: 0.3s; font-size: 1rem;
+}
+
+.btn-confirm:hover { 
+    background: #e0e0e0; transform: scale(1.02); 
+}
+
+.btn-mute { 
+    background: none; color: #999999; border: none; text-decoration: underline; 
+    font-size: 0.8rem; margin-top: 25px; cursor: pointer; font-weight: 700; 
+}
+
+.fade-in { animation: fadeIn 2s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

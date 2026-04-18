@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Nuestra Boda</h1>
+
+        <span class="subtitle">¡NOS CASAMOS!</span>
+
+        <div id="cuentaRegresiva" class="countdown-container">
+            <div class="countdown-item"><span id="dias">00</span><p>Días</p></div>
+            <div class="countdown-item"><span id="horas">00</span><p>Hrs</p></div>
+            <div class="countdown-item"><span id="minutos">00</span><p>Min</p></div>
+            <div class="countdown-item"><span id="segundos">00</span><p>Seg</p></div>
+        </div>
+
+        <audio id="miCancion" src="cancion.mp3" preload="auto" loop></audio>
+
+        <div id="informacion" class="fade-in">
+            <p class="texto-bienvenida">Estás cordialmente invitado a celebrar con nosotros.</p>
+            <p class="subtitle">¡Acompáñanos en este gran día!</p>
+        <br>
+        <p class="subtitle">Nuestros padres:
+            <p class="subtitle">Francisco Juárez y Maria de Lourdes Michua</p>
+             <p class="subtitle">Carlos Martínez y Barbara Ochoa</p>
+         <br>
+        </p><p class="subtitle">Nuestros padrinos:</p>
+        <p class="subtitle">Delfino Michua y Lourdes Chiquito</p>
+        <br>
+         <p class="subtitle">22 de Agosto 2026</p>
+        <p class="subtitle">Ceremonia: Templo de la divina misericordia 17:00 hrs</p>
+ <p class="subtitle">Recepción: Salón Invernadero 18:30 hrs</p>
+
+            <div class="locations-section">
+                <p class="location-title">UBICACIONES</p>
+                <a href="https://maps.app.goo.gl/LngASsGWExnAPBRA9?g_st=aw" target="_blank" class="btn-location">⛪ Templo de la Divina Misericordia</a>
+                <a href="https://maps.app.goo.gl/F5keyjUZ2ZpXa6jk8?g_st=aw" target="_blank" class="btn-location">🎉 Salón de Eventos "Invernadero"</a>
+            </div>
+
+            <img src="foto_boda_2.jpg" class="secondary-photo">
+            
+            <button class="btn-confirm" onclick="confirmarWhatsApp()">Confirmar Asistencia</button>
+            <br>
+            <button class="btn-mute" onclick="toggleMusica()" id="btnControl">Pausar Música ⏸</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
